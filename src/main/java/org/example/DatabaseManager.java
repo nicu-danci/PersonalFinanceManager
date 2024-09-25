@@ -62,4 +62,28 @@ public class DatabaseManager {
             return false;
         }
     }
+
+    //method to authenticate user by username and password
+
+    public boolean authenticateUser(String username, String passwordHash){
+        String sql = "SELECT * FROM users WHERE username = ? AND password = ?";
+
+        try(Connection conn=this.connect();
+        PreparedStatement pstmt = conn.prepareStatement(sql)) {
+            pstmt.setString(1, username);
+            pstmt.setString(2, passwordHash);
+            ResultSet rs = pstmt.executeQuery();
+
+            if(rs.next()) {
+                System.out.println("Login successfully.");
+                return true;
+            } else {
+                System.out.println("Login failed. Incorrect username or password.");
+                return false;
+            }
+        } catch (SQLException e) {
+            System.out.println(e.getMessage());
+            return false;
+        }
+    }
 }
