@@ -46,7 +46,7 @@ public class DatabaseManager {
         }
     }
 
-    // method to register a new user
+    // method to register new users
     public boolean registerUser (String username, String email, String hashedPassword) {
         String sql = "INSERT INTO users(username, email, password) VALUES(?, ?, ?)";
         try (Connection conn = this.connect();

@@ -16,7 +16,7 @@ public class Transaction {
         this.transactionType = transactionType;
     }
 
-    //Getters and Setters
+    //getters and setters
 
     public Date getDate(){
         return date;

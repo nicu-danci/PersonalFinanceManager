@@ -14,7 +14,7 @@ public class User {
         this.password = password;
         this.transactions = new ArrayList<>();
     }
-    //Getters and Setters
+    //getters and setters
 
     public String getUsername(){
         return username;

@@ -9,8 +9,6 @@ import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-import java.util.Scanner;
-
 public class FinanceManager extends Application{
 
     DatabaseManager dbManager = new DatabaseManager();
