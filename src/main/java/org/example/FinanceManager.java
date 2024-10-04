@@ -2,8 +2,6 @@ package org.example;
 
 
 import javafx.scene.control.*;
-import org.example.DatabaseManager;
-import org.example.PasswordUtil;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.layout.VBox;
